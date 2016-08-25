@@ -1,6 +1,13 @@
 module RepositoryHelper
   def periodicity_options
-    [["Not Periodically", 0], ["1 day", 1], ["2 days", 2], ["Weekly", 7], ["Biweekly", 15], ["Monthly", 30]]
+    current_url = "#{request.protocol}#{request.host_with_port}#{request.fullpath}"
+    portuguese_regex = "pt"
+
+    if(current_url.match(portuguese_regex))
+      [["Sem periodicidade", 0], ["1 dia", 1], ["2 dias", 2], ["Semanal", 7], ["Quinzenal", 15], ["Mensal", 30]]
+    else
+      [["Not Periodically", 0], ["1 day", 1], ["2 days", 2], ["Weekly", 7], ["Biweekly", 15], ["Monthly", 30]]
+    end
   end
 
   def license_options
