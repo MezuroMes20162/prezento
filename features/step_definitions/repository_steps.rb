@@ -152,6 +152,12 @@ When(/^I set the select field "(.+)" as "(.+)"$/) do |field, text|
   select text, from: field
 end
 
+When(/^I set the date select fields to today$/) do
+  step "I set the select field \"day\" as \"#{Date.today.day}\""
+  step "I set the select field \"month\" as \"#{Date.today.month}\""
+  step "I set the select field \"year\" as \"#{Date.today.year}\""
+end
+
 When(/^I visit the repository show page$/) do
   visit repository_path(id: @repository.id)
 end

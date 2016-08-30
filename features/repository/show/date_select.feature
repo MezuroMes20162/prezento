@@ -18,12 +18,13 @@ Feature: Date Select
     Then I should see "Retrieve the closest processing information from:"
     When I set the select field "day" as "1"
     And I set the select field "month" as "1"
-    And I set the select field "year" as "2016"
+    And I set the select field "year" as "2013"
     And I press the Search button
     And I get the Creation Date information as "before"
-    When I set the select field "day" as "1"
-    And I set the select field "month" as "1"
-    And I set the select field "year" as "2020"
+    When I set the select fields to today
+    And I set the select field "day" as "6"
+    And I set the select field "month" as "9"
+    And I set the select field "year" as "2016"
     And I press the Search button
     And I get the Creation Date information as "after"
     Then "before" should be lesser than "after"
