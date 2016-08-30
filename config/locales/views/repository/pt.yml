@@ -13,6 +13,7 @@ pt:
         address: "Endereço"
         period: "Período"
         branch: "Ramo"
+        type: "Tipo"
     hints:
       repository:
         name: "O nome do seu Repositório."

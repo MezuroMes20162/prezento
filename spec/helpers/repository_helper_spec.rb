@@ -48,6 +48,12 @@ describe RepositoryHelper, :type => :helper do
     end
   end
 
+  describe 'portuguese_periodicity_options' do
+    it 'should return an array with some sample periods in portuguese' do
+      expect(helper.portuguese_periods_options).to eq [["Sem periodicidade", 0], ["1 dia", 1], ["2 dias", 2], ["Semanal", 7], ["Quinzenal", 15], ["Mensal", 30]]
+    end
+  end
+
   describe 'license_options' do
     it 'should return an array with some sample licenses names' do
       expect(helper.license_options).to eq YAML.load_file("config/licenses.yml").split("; ")
