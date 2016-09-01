@@ -164,6 +164,11 @@ When(/^I click the "(.*?)" h3$/) do |text|
   page.find('h3', text: text).click()
 end
 
+When(/^I click the link "(.*?)"$/) do |text|
+  puts page.body
+  page.find('a', text: text).click()
+end
+
 When(/^I wait up for the ajax request$/) do
   while (page.driver.network_traffic.last.response_parts.empty?) do
     sleep(10)
@@ -305,6 +310,6 @@ When(/^I click on the center of the color picker$/) do
 end
 
 Then(/^I should see a div with class "(.*?)"$/) do |arg1|
-    #page.find("div.#{arg1}")
-    expect(page).to have_css(:css, "div.#{arg1}")
-  end
+  puts page.body
+  page.all("div.#{arg1}")
+end
