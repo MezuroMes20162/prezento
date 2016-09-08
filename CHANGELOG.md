@@ -6,7 +6,10 @@ The version numbers below try to follow the conventions at http://semver.org/.
 
 ## Unreleased
 
+- Adds repository image on project attribute creation
+- Fixing wrong configurations translation in portuguese navbar
 - Fix warnings about 'prezento_errors'
+- Creates pattern for creation tooltips in Compound Metric Configuration
 
 ## v1.1.0 - 01/06/2016
 
