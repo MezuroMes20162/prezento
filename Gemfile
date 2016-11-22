@@ -129,6 +129,12 @@ group :development, :test do
 
   # Automatized gem update
   gem 'gisdatigo'
+
+  # Slice tests across jobs on CI
+  gem 'knapsack'
+
+  # JavaScript server
+  gem 'poltergeist', '~> 1.7.0'
 end
 
 # Acceptance tests
@@ -136,7 +142,6 @@ group :cucumber do
   gem 'cucumber-rails', '~> 1.4.0'
   # cleans the database
   gem 'database_cleaner', '~> 1.5.0'
-  gem 'poltergeist', '~> 1.7.0'
 end
 
 

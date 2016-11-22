@@ -6,7 +6,15 @@ The version numbers below try to follow the conventions at http://semver.org/.
 
 ## Unreleased
 
+- Adds nation flags for language choice
+- Adds gravatar support
+- Refactor latest method
+- Remove the repository's instance that has remained in the db
+- Adding translation of the periodicity options in repository helper
+- Fixing wrong configurations translation in portuguese navbar
 - Fix warnings about 'prezento_errors'
+- Creates pattern for creation tooltips in Compound Metric Configuration
+- Update development Ruby target to 2.3.1
 
 ## v1.1.0 - 01/06/2016
 
